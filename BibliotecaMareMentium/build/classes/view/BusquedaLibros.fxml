@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="825.0" style="-fx-background-color: #fff5ee;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.BusquedaLibrosController">
+   <children>
+      <Label fx:id="lblGestiondeLibros" layoutX="160.0" layoutY="21.0" text="BUSQUEDA DE LIBROS">
+         <font>
+            <Font name="Times New Roman Bold" size="45.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ImagenesFondos/libroslargos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="675.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ImagenesFondos/libroslargos.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblTabla" layoutX="65.0" layoutY="185.0" onMouseClicked="#handleMouseAction" prefHeight="301.0" prefWidth="695.0">
+         <columns>
+            <TableColumn fx:id="colIsbn" minWidth="0.0" prefWidth="61.0" text="ISBN" />
+            <TableColumn fx:id="colTitulo" prefWidth="120.0" text="TITULO" />
+            <TableColumn fx:id="colAutor" minWidth="0.0" prefWidth="94.0" text="AUTOR" />
+            <TableColumn fx:id="colEditorial" prefWidth="132.0" text="EDITORIAL" />
+            <TableColumn fx:id="colAnio" prefWidth="81.0" text="AÑO " />
+            <TableColumn fx:id="colGenero" prefWidth="96.0" text="GENERO" />
+            <TableColumn fx:id="colDisponibles" prefWidth="110.0" text="DISPONIBLES" />
+         </columns>
+      </TableView>
+      <VBox layoutX="164.0" layoutY="86.0" prefHeight="87.0" prefWidth="499.0">
+         <children>
+            <AnchorPane prefHeight="90.0" prefWidth="670.0" style="-fx-background-color: e5bdb1;">
+               <children>
+                  <TextField fx:id="txtBuscar" layoutX="161.0" layoutY="30.0" />
+                  <Label fx:id="lblTitulo" layoutX="25.0" layoutY="35.0" prefHeight="20.0" prefWidth="136.0" text="PARAMETRO:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnBuscar" layoutX="377.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #c495cb; -fx-cursor: HAND;" text="BUSCAR" textFill="#fffefe">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Button fx:id="btnVolver" layoutX="719.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #8fbb1d; -fx-cursor: HAND;" text="VOLVER" textFill="#f7f8f5">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="675.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ICONOS/regreso%20(2).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
